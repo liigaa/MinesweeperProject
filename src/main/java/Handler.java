@@ -9,7 +9,7 @@ public class Handler {
 
     public void click(Cell cell) {
         int uncoveredCells = 0;
-        if (cell.isFlagged()) {
+        if (!cell.isFlagged()) {
             cell.setEnabled(false);
             cell.setUncovered(true);
 

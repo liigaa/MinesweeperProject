@@ -18,10 +18,10 @@ public class Cell extends JButton {
 
         addMouseListener(new MouseListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                if(SwingUtilities.isRightMouseButton(e)) {
+            public void mouseClicked(MouseEvent e){
+                if (SwingUtilities.isRightMouseButton(e)){
                     rightClickButton();
-                } else {
+                }else {
                     clickButton();
                 }
             }
@@ -71,9 +71,9 @@ public class Cell extends JButton {
     public void setFlagged(boolean flagged) {
         this.flagged = flagged;
     }
-    public  void clickButton() {
+   public void clickButton(){
         handler.click(this);
-    }
+   }
     public void  rightClickButton() {
         handler.rightClick(this);
     }
