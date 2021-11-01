@@ -20,7 +20,7 @@ public class Board {
         frame.pack();
         frame.setVisible(true);
     }
-
-
-
+    public static void update(int flagged){
+        frame.setTitle(title + " Mines: "+ Game.MINECOUNT + " - Flags: " + flagged);
+    }
 }

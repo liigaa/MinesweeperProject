@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Handler {
 
-    private ArrayList<Cell> current = new ArrayList<Cell>();
-    private ArrayList<Cell> flood = new ArrayList<Cell>();
+    private ArrayList<Cell> current = new ArrayList<>();
+    private ArrayList<Cell> flood = new ArrayList<>();
 
     private static int flaggedCells = 0;
 
@@ -166,7 +166,7 @@ public class Handler {
                         Grid.cells.get(x).setEnabled(false);
                         Grid.cells.get(x).setText("M");
                     } else {
-                        Grid.cells.get(x).setUncovered(false);
+                        Grid.cells.get(x).setEnabled(false);
                         Grid.cells.get(x).setText(":D");
                     }
                 }
@@ -179,13 +179,12 @@ public class Handler {
                 cell.setFlagged(true);
                 cell.setText("F");
                 flaggedCells++;
-                Board.update(flaggedCells);
             } else {
                 cell.setFlagged(false);
                 cell.setText("");
                 flaggedCells--;
-                Board.update(flaggedCells);
             }
+            Board.update(flaggedCells);
         }
     }
 }

@@ -75,5 +75,6 @@ public class Cell extends JButton {
         handler.click(this);
     }
     public void  rightClickButton() {
+        handler.rightClick(this);
     }
 }

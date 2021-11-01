@@ -12,5 +12,6 @@ public class Game {
     public Game(){
         Handler handler = new Handler();
         new Board(WIDTH, HEIGHT, GRIDCOUNT, "Minesweeper", handler);
+        Board.update(0);
     }
 }
