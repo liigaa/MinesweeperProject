@@ -7,12 +7,14 @@ public class Cell extends JButton {
     private int type; // TYPES -- 0: Empty, 1: Mine, 2: Number
     private boolean uncovered;
     private boolean flagged;
+    private final Handler handler;
 
-    public Cell (int type, int position, boolean uncovered, boolean flagged) {
+    public Cell (int type, int position, boolean uncovered, boolean flagged, Handler handler) {
         this.type = type;
         this.position = position;
         this.uncovered = uncovered;
         this.flagged = flagged;
+        this.handler=handler;
 
         addMouseListener(new MouseListener() {
             @Override
@@ -70,9 +72,8 @@ public class Cell extends JButton {
         this.flagged = flagged;
     }
     public  void clickButton() {
-
+        handler.click(this);
     }
     public void  rightClickButton() {
-
     }
 }
