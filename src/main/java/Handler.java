@@ -111,7 +111,7 @@ public class Handler {
                     if (Grid.cells.get(position + Game.GRIDCOUNT + 1).getType() == 1) minesNearby++;
                     if (Grid.cells.get(position - Game.GRIDCOUNT + 1).getType() == 1) minesNearby++;
                     if (Grid.cells.get(position + 1).getType() == 1) minesNearby++;
-                } else if (position % Game.GRIDCOUNT == 1) {
+                } else if (position % Game.GRIDCOUNT == Game.GRIDCOUNT-1) {
                     if (Grid.cells.get(position - Game.GRIDCOUNT).getType() == 1) minesNearby++;
                     if (Grid.cells.get(position + Game.GRIDCOUNT).getType() == 1) minesNearby++;
                     if (Grid.cells.get(position + Game.GRIDCOUNT - 1).getType() == 1) minesNearby++;
